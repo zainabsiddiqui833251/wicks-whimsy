@@ -1,5 +1,3 @@
-import { url } from "inspector";
-
  const blog_data = [
     {
         id: 1,

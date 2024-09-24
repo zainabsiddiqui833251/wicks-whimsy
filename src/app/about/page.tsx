@@ -5,7 +5,7 @@ const About = () => {
     return (
         <main >
             <div className='w-[90%] m-auto flex justify-between items-center'>
-                <section className='w-fit flex justify-start items-center p-[4%] '>
+                <section className=' flex justify-start items-center p-[4%] w-[50%] '>
                     <Image src='/images/aboutimg.jpg' width={450} height={450} alt='' className=' border-solid border-[black] border-[10px]'></Image>
                 </section>
                 <section className='w-[50%] text-[1.1vw]  p-1'>

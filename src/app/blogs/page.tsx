@@ -10,7 +10,7 @@ const Blogs = () => {
                 <h2 className='text-[3vw] text-center capitalize'>the best blogs</h2>
                 <div className="card-container p-4 flex justify-center items-center gap-16 mt-6">
                     {blog.map(blog => (
-                        <div key={blog.id} className="card w-[40%] flex-wrap bg-[#f9f7e3] capitalize border-solid border-[1px] border-black p-4">
+                        <div key={blog.id} className="card transition-transform duration-300 ease-in-out transform hover:scale-105 w-[40%] flex-wrap bg-[#f9f7e3] capitalize border-solid border-[1px] border-black p-4">
                             <Image
                                 src={blog.image}
                                 width={500}
