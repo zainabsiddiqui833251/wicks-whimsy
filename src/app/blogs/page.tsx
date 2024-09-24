@@ -1,15 +1,36 @@
-import React from 'react';
+'use client'
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import blog from '../api/blogs-data/route'; // Adjust the path as necessary
+
+interface Blog {
+    id: number;
+    title: string;
+    image: string;
+    description: string;
+    author: string;
+    url: string;
+}
 
 const Blogs = () => {
+    const [blogData, setBlogData] = useState<Blog[]>([]); // Specify the type here
+
+    useEffect(() => {
+        const fetchBlogs = async () => {
+            const response = await fetch('/api/blogs-data'); // Ensure this path is correct
+            const data = await response.json();
+            setBlogData(data);
+        };
+
+        fetchBlogs();
+    }, []);
+
     return (
         <main className='w-[100%]'>
             <section className='w-[90%] m-auto p-[3%]'>
                 <h2 className='text-[3vw] text-center capitalize'>the best blogs</h2>
                 <div className="card-container p-4 flex justify-center items-center gap-16 mt-6">
-                    {blog.map(blog => (
+                    {blogData.map(blog => (
                         <div key={blog.id} className="card transition-transform duration-300 ease-in-out transform hover:scale-105 w-[40%] flex-wrap bg-[#f9f7e3] capitalize border-solid border-[1px] border-black p-4">
                             <Image
                                 src={blog.image}
@@ -38,3 +59,4 @@ const Blogs = () => {
 }
 
 export default Blogs;
+

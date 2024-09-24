@@ -2,13 +2,13 @@ import React from 'react'
 import Link from 'next/link'
 
 const Header = () => {
-    
+
     return (
         <header >
             <div className="header-text w-fit p-[6%] ">
                 <h1 className='text-[2.5vw] uppercase m-2'>Welcome to</h1>
-                    <p id='typing text' className='text-[3.9vw] capitalize'>Wicks & Whimsy</p>
-                
+                <p id='typing text' className='text-[3.9vw] capitalize'>Wicks & Whimsy</p>
+
                 <h3 className='text-[1.7vw] m-2 capitalize'>ignite your senses ,light your home</h3>
                 <p className='text-[1.2vw] m-2'>&quot;Illuminate your space with our exquisite collection of handcrafted candles. Each scent is <br /> thoughtfully
                     curated to evoke memories, create ambiance, and bring warmth to your <br /> home. Whether you&apos;re looking for
